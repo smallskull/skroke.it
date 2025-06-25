@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whiteboard App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    
+    <canvas id="canvas"></canvas>
+
+    <div id="export-panel">
+        <button id="export-png"><img src="/images/img_exp.jpeg" alt="export as image"></button>
+        <button id="export-pdf"><img src="/images/pdf_exp.jpeg" alt="export as pdf"></button>
+    </div>
+
+    <div id="toolbar">
+      <div class="dropdown" id="markerTool" data-icon-name="marker_icon">
+        <button class="main-btn" onclick="toggleSizePanel('marker')">
+          <img src="/images/marker_icon.jpeg" alt="Marker" style="width: 100%; height: auto;" />
+        </button>
+        <div class="sub-buttons" id="markerPanel">
+          <button onclick="setTool('size-1')"><img src="/images/marker_1.jpeg" alt="1"></button>
+          <button onclick="setTool('size-2')"><img src="/images/marker_2.jpeg" alt="2"></button>
+          <button onclick="setTool('size-3')"><img src="/images/marker_3.jpeg" alt="3"></button>
+          <button onclick="setTool('size-4')"><img src="/images/marker_4.jpeg" alt="4"></button>
+        </div>
+      </div>
+
+      
+      <div class="dropdown" id="eraserTool" data-icon-name="eraser_icon">
+        <button class="main-btn" onclick="toggleSizePanel('eraser')">
+          <img src="/images/eraser_icon.jpeg" alt="Eraser" style="width: 100%; height: auto;" />
+        </button>
+        <div class="sub-buttons" id="eraserPanel">
+          <button onclick="setTool('esize-1')"><img src="/images/eraser_1.jpeg" alt="1"></button>
+          <button onclick="setTool('esize-2')"><img src="/images/eraser_2.jpeg" alt="2"></button>
+          <button onclick="setTool('esize-3')"><img src="/images/eraser_3.jpeg" alt="3"></button>
+          <button onclick="setTool('esize-4')"><img src="/images/eraser_4.jpeg" alt="4"></button>
+        </div>
+      </div>
+
+      
+      <div class="dropdown" id="shapesTool" data-icon-name="shapes_icon">
+        <button class="main-btn" onclick="toggleSizePanel('shapes')">
+          <img src="/images/shapes_icon.jpeg" alt="Shapes" style="width: 100%; height: auto;" />
+        </button>
+        <div class="sub-buttons" id="shapesPanel">
+          <button onclick="setTool('rectangle')"><img src="/images/rectangle.jpeg" alt="Rect"></button>
+          <button onclick="setTool('circle')"><img src="/images/circle.jpeg" alt="Circle"></button>
+          <button onclick="setTool('triangle')"><img src="/images/triangle.jpeg" alt="Tri"></button>
+        </div>
+      </div>
+
+      <input type="color" onchange="currentColor = this.value" />
+
+      
+      <div class="dropdown">
+        <button id="undo" class="main-btn" onclick="undo()"><img src="/images/undo.jpeg" alt="Undo"></button>
+      </div>
+      <div class="dropdown">
+        <button id="redo" class="main-btn" onclick="redo()"><img src="/images/redo.jpeg" alt="Redo"></button>
+      </div>
+      <div class="dropdown">
+        <button id="clear" class="main-btn" onclick="clearCanvas()"><img src="/images/clear.jpeg" alt="Clear"></button>
+      </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
