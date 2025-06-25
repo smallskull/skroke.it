@@ -2,7 +2,7 @@ let canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var io = io.connect('http://localhost:6969');
+var io = io.connect('https://skroke-it.vercel.app/');
 
 let ctx = canvas.getContext("2d");
 
