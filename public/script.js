@@ -2,7 +2,7 @@ let canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var io = io.connect('https://skroke-it.onrender.com/');
+var io = io.connect('https://skroke-it-7vru.onrender.com');
 
 let ctx = canvas.getContext("2d");
 
