@@ -304,10 +304,10 @@ document.getElementById('export-pdf').onclick = () => {
 
   // redo hover
   exportRedoButton.addEventListener('mouseenter', () => {
-    exportRedoImg.src = '/images/redo.jpeg';
+    exportRedoImg.src = '/images/redo_hover.jpeg';
   });
   exportRedoButton.addEventListener('mouseleave', () => {
-    exportRedoImg.src = '/images/redo_hover.jpeg';
+    exportRedoImg.src = '/images/redo.jpeg';
   });
 
   // clear hover
