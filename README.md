@@ -17,7 +17,7 @@
 ---
 
 ## 🖼️ Screenshot
-![stroke.it preview](assets/screenshot.png)
+![stroke.it preview](/asset/WhatsApp Image 2025-06-25 at 13.55.48.jpeg)
 
 ---
 
